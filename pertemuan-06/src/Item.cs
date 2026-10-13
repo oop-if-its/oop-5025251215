@@ -34,18 +34,15 @@ public class Item
 
     // TODO(Level 5): jadikan `virtual`; override di Buku/Majalah/Dvd dengan
     //   MEMANGGIL versi induk lewat base.Deskripsi() lalu menambahkan detailnya.
-    public string Deskripsi()
-    {
-        // TODO(Level 5): kembalikan "[<Judul>]" -- mis. "[Bumi Manusia]".
-        throw new NotImplementedException("Level 5 belum diimplementasikan");
-    }
+   public virtual string Deskripsi()
+{
+    return $"[{Judul}]";
+}
 
-    public override string ToString()
-    {
-        // TODO(Level 5): kembalikan Deskripsi() (dipanggil secara polimorfik --
-        //   jenis objek yang sebenarnya menentukan hasilnya).
-        throw new NotImplementedException("Level 5 belum diimplementasikan");
-    }
+   public override string ToString()
+{
+    return Deskripsi();
+}
 
     // TODO(Level 10 (bonus)): override Equals(object?) dan GetHashCode(): dua
     //   Item dianggap SAMA bila jenis (GetType()) sama DAN Judul sama (huruf
