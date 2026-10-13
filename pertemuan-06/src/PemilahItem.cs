@@ -28,15 +28,24 @@ public static class PemilahItem
         return null;
     }
 
-    // Level 8 (BELUM — biarkan dulu)
+    // Level 8
     public static Buku KeBuku(Item item)
     {
-        throw new NotImplementedException("Level 8 belum diimplementasikan");
+        if (item is null)
+            throw new ArgumentNullException(nameof(item));
+
+        return (Buku)item;
     }
 
-    // Level 8 (BELUM — biarkan dulu)
+    // Level 8
     public static bool CobaKeBuku(Item? item, out Buku? buku)
     {
-        throw new NotImplementedException("Level 8 belum diimplementasikan");
+        if (item is Buku b)
+        {
+            buku = b;
+            return true;
+        }
+        buku = null;
+        return false;
     }
 }
