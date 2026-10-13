@@ -22,7 +22,7 @@ public class Item
 
     // TODO(Level 2): jadikan method ini `virtual` supaya bisa di-override (lalu
     //   tulis override-nya di Buku, Majalah, Dvd).
-    public int HitungDenda(int hariTerlambat)
+    public virtual int HitungDenda(int hariTerlambat)
 {
     if (hariTerlambat <= 0) return 0;
     return 1000 * hariTerlambat;
